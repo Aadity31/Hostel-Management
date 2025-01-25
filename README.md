@@ -39,7 +39,7 @@ This project was developed as a group project at **NIIBS Campus.**
 The development of this project was carried out by a dedicated team of developers:
 - **Buddhi Rangana**
 - **Nadun Hirudika**
-- **Kasun Kovid**
+- **Kasun Kovida**
 - **Deshan Dhananjaya**
 - **Mahela Sandaruwan**
 
