@@ -62,5 +62,5 @@ The development of this project was carried out by a dedicated team of developer
 If you wish to contribute to the project, feel free to submit a pull request with your suggestions or improvements.
 
 ## License
-Distributed under the MIT License. See `LICENSE` for more information
+Distributed under the MIT License. See `LICENSE` for more information.
 
