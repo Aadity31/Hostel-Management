@@ -11,7 +11,7 @@ public class db {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/hms_db?" + "autoReconnect=true&useSSL=false", "root", "");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hms?" + "autoReconnect=true&useSSL=false", "root", "");
             return conn;
 
         } catch (ClassNotFoundException | SQLException e) {
