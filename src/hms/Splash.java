@@ -46,7 +46,7 @@ public class Splash extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 10)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(47, 62, 80));
-        jLabel7.setText("By: BSc (Hons.) in IT, 2023/A, Group 02");
+        jLabel7.setText("By: BTech CSE(AIML), L1");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

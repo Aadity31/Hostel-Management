@@ -25,7 +25,7 @@ This project was developed as a group project at **NIIBS Campus.**
 - **MySQL** - for database management
 
 ### Development Tools
-- **NetBeans IDE** - Used for coding and project management
+- **Ecllipse IDE** - Used for coding and project management
 - **XAMPP Server** - Used for database management and server hosting
 
 ### Libraries Used
@@ -37,30 +37,15 @@ This project was developed as a group project at **NIIBS Campus.**
 
 ## Team Members
 The development of this project was carried out by a dedicated team of developers:
-- **Buddhi Rangana**
-- **Nadun Hirudika**
-- **Kasun Kovida**
-- **Deshan Dhananjaya**
-- **Mahela Sandaruwan**
-
-## Installation Guide
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/buddhirangana/hostel-management-system.git
-   ```
-2. Install Java, NetBeans IDE, and XAMPP server on your system.
-3. Import the provided SQL database into MySQL via XAMPP.
-4. Configure the database connection in the system.
-5. Open and run the project using NetBeans IDE.
+- **Shwetanshu Bhatt**
+- **Aditya Dimri**
+- **Rawdi Rathore**
+- **Radwi ki dost**
 
 ## Usage
 - Login with appropriate credentials based on the user role.
 - Navigate through the intuitive dashboard to access various functionalities.
 - Export and manage hostel data effortlessly.
 
-## Contribution
-If you wish to contribute to the project, feel free to submit a pull request with your suggestions or improvements.
 
-## License
-Distributed under the MIT License. See `LICENSE` for more information.
 
