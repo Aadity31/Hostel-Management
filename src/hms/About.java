@@ -16,7 +16,7 @@ public final class About extends javax.swing.JFrame {
                 + "and generates related reports for smooth transactions.";
         txt_details.setText("<html>" + myText1 + "</html>");
         
-        String myText2 = "Buddhi Rangana, Nadun Hirudika, Kasun Kovida, Deshan Dhananjaya, Mahela Sandaruwan";
+        String myText2 = "Aditya Dimri, Priyanshi Bhatt, Pranjali Rathore, Shwetanshu Bhatt";
         txt_dev.setText("<html>" + myText2 + "</html>");
         
     }
