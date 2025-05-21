@@ -37,10 +37,10 @@ This project was developed as a group project at **NIIBS Campus.**
 
 ## Team Members
 The development of this project was carried out by a dedicated team of developers:
-- **Shwetanshu Bhatt**
 - **Aditya Dimri**
-- **Rawdi Rathore**
-- **Radwi ki dost**
+- **Priyanshi Bhatt**
+- **Pranjali Rathore**
+- **Shwetanshu Bhatt**
 
 ## Usage
 - Login with appropriate credentials based on the user role.
