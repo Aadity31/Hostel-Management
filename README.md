@@ -4,7 +4,7 @@
 
 The **Hostel Management System** is a standalone application designed to efficiently manage hostel-related operations. It provides an intuitive interface and robust functionalities to cater to the needs of hostel administrators, staff, and students. The system was developed using **Java** and **MySQL**, ensuring reliability and performance.
 
-This project was developed as a group project at **NIIBS Campus.**
+This project was developed as a group project at **GEHU.**
 
 ## Key Features
 ### User Roles
