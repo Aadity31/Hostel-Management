@@ -15,6 +15,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.Objects;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -28,7 +29,7 @@ public final class Dashboard extends javax.swing.JFrame {
 
     public Dashboard() {
         initComponents();
-        setIconImage(new ImageIcon(getClass().getResource("/hms/img/HMS.png")).getImage());
+        setIconImage(new ImageIcon(Objects.requireNonNull(getClass().getResource("/hms/img/HMS.png"))).getImage());
         conn = hms.db.connect();
         setColor(btn_1);
         ind_1.setOpaque(true);
@@ -52,7 +53,7 @@ public final class Dashboard extends javax.swing.JFrame {
 
     public void currentDate() {
         Date d = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy MMMM dd");
+        SimpleDateFormat sdf = new SimpleDateFormat("MMMM dd yyyy");
     }
 
     public void shotime() {

@@ -53,7 +53,7 @@ public final class Dashboard extends javax.swing.JFrame {
 
     public void currentDate() {
         Date d = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy MMMM dd");
+        SimpleDateFormat sdf = new SimpleDateFormat("MMMM dd yyyy");
     }
 
     public void shotime() {

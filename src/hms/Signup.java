@@ -1,8 +1,8 @@
 package hms;
 
 import com.formdev.flatlaf.FlatIntelliJLaf;
-import java.awt.Dimension;
-import java.awt.Toolkit;
+
+import java.awt.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -11,6 +11,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
@@ -66,7 +67,7 @@ public class Signup extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hms/img/Login Img.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(Objects.requireNonNull(getClass().getResource("/hms/img/Login Img.png")))); // NOI18N
 
         btn_register.setBackground(new java.awt.Color(0, 166, 80));
         btn_register.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
@@ -80,14 +81,14 @@ public class Signup extends javax.swing.JFrame {
             }
         });
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Segue UI", Font.PLAIN, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(153, 153, 153));
         jLabel8.setText("Password");
 
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hms/img/user_icon.png"))); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon(Objects.requireNonNull(getClass().getResource("/hms/img/user_icon.png")))); // NOI18N
 
-        jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel17.setFont(new java.awt.Font("Segue UI", Font.PLAIN, 18)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(153, 153, 153));
         jLabel17.setText("Username");
 
@@ -96,7 +97,7 @@ public class Signup extends javax.swing.JFrame {
         txtpassword.setBorder(null);
         txtpassword.setEchoChar((char)8226);
 
-        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Tahoma", Font.PLAIN, 15)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(153, 153, 153));
         jLabel12.setText("_________________________________________");
 
@@ -109,7 +110,7 @@ public class Signup extends javax.swing.JFrame {
         txtusername.setBorder(null);
 
         disable1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        disable1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hms/img/invisible_icon.png"))); // NOI18N
+        disable1.setIcon(new javax.swing.ImageIcon(Objects.requireNonNull(getClass().getResource("/hms/img/invisible_icon.png")))); // NOI18N
         disable1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         disable1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -118,7 +119,7 @@ public class Signup extends javax.swing.JFrame {
         });
 
         show1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        show1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hms/img/eye_icon.png"))); // NOI18N
+        show1.setIcon(new javax.swing.ImageIcon(Objects.requireNonNull(getClass().getResource("/hms/img/eye_icon.png")))); // NOI18N
         show1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         show1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -148,7 +149,7 @@ public class Signup extends javax.swing.JFrame {
         jLabel9.setText("Comfirm password");
 
         disable2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        disable2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hms/img/invisible_icon.png"))); // NOI18N
+        disable2.setIcon(new javax.swing.ImageIcon(Objects.requireNonNull(getClass().getResource("/hms/img/invisible_icon.png")))); // NOI18N
         disable2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         disable2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -157,7 +158,7 @@ public class Signup extends javax.swing.JFrame {
         });
 
         show2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        show2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hms/img/eye_icon.png"))); // NOI18N
+        show2.setIcon(new javax.swing.ImageIcon(Objects.requireNonNull(getClass().getResource("/hms/img/eye_icon.png")))); // NOI18N
         show2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         show2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -170,9 +171,9 @@ public class Signup extends javax.swing.JFrame {
         jLabel18.setText("User type");
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hms/img/usertype_icon.png"))); // NOI18N
+        jLabel11.setIcon(new javax.swing.ImageIcon(Objects.requireNonNull(getClass().getResource("/hms/img/usertype_icon.png")))); // NOI18N
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hms/img/back_icon.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(Objects.requireNonNull(getClass().getResource("/hms/img/back_icon.png")))); // NOI18N
         jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -340,13 +341,19 @@ public class Signup extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel2MouseClicked
 
     private void btn_registerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_registerActionPerformed
+        String username = txtusername.getText();
+        if (!username.matches("^[a-zA-Z0-9]+$")) {
+            getToolkit().beep();
+            JOptionPane.showMessageDialog(this, "Username can only contain letters and numbers", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
         if (txtusername.getText().isEmpty()) {
             getToolkit().beep();
             JOptionPane.showMessageDialog(this, "Please Enter Username", "Error", JOptionPane.ERROR_MESSAGE);
         } else if (txtpassword.getText().isEmpty()) {
             getToolkit().beep();
             JOptionPane.showMessageDialog(this, "Please Enter Password", "Error", JOptionPane.ERROR_MESSAGE);
-        } else if (txtpassword.getText().equals(txtcompassword.getText()) == false) {
+        } else if (!txtpassword.getText().equals(txtcompassword.getText())) {
             getToolkit().beep();
             JOptionPane.showMessageDialog(this, "Password Not Matched", "Error", JOptionPane.ERROR_MESSAGE);
         } else if ((comb_usertype.getSelectedItem().equals("Select"))) {
@@ -355,7 +362,7 @@ public class Signup extends javax.swing.JFrame {
         } else {
             try {
 
-                String username = txtusername.getText();
+
                 String confirmpass = txtcompassword.getText();
                 String usertype = comb_usertype.getSelectedItem().toString();
 
@@ -405,7 +412,7 @@ public class Signup extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_registerActionPerformed
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         try {
             FlatIntelliJLaf.registerCustomDefaultsSource("hms.style");

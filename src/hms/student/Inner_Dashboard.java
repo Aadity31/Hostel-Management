@@ -26,7 +26,7 @@ public final class Inner_Dashboard extends javax.swing.JInternalFrame {
         shotime();
         totalRooms();
         totalStudent();
-        txtdate.setText(now("yyyy MMMM dd"));
+        txtdate.setText(now("MMMM dd yyyy"));
         txttime.setText(now("hh:mm aaa"));
         Toolkit toolkit = getToolkit();
     }
@@ -39,7 +39,7 @@ public final class Inner_Dashboard extends javax.swing.JInternalFrame {
 
     public void currentDate() {
         Date d = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy MMMM dd");
+        SimpleDateFormat sdf = new SimpleDateFormat("MMMM dd yyyy");
         txtdate.setText(sdf.format(d));
     }
 

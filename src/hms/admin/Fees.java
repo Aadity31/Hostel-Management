@@ -75,7 +75,7 @@ public final class Fees extends javax.swing.JInternalFrame {
 
     public void currentDate() {
         Date d = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy MMMM dd");
+        SimpleDateFormat sdf = new SimpleDateFormat("MMMM dd yyyy");
     }
 
     public void shotime() {
@@ -366,7 +366,7 @@ public final class Fees extends javax.swing.JInternalFrame {
                 pst.setString(1, txtstuid.getText());
                 pst.setString(2, txtname.getText());
 
-                SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd");
+                SimpleDateFormat sdf = new SimpleDateFormat("MM.dd.yyyy");
                 String date = sdf.format(add_date.getDate());
 
                 pst.setString(3, date);
@@ -432,7 +432,7 @@ public final class Fees extends javax.swing.JInternalFrame {
                     String value1 = txtstuid.getText();
                     String value2 = txtname.getText();
 
-                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd");
+                    SimpleDateFormat sdf = new SimpleDateFormat("MM.dd.yyyy");
                     String date = sdf.format(add_date.getDate());
 
                     String value3 = date;
@@ -563,7 +563,7 @@ public final class Fees extends javax.swing.JInternalFrame {
 
         try {
             int srow = fees_table.getSelectedRow();
-            Date date = new SimpleDateFormat("yyyy.MM.dd").parse((String) model.getValueAt(srow, 2));
+            Date date = new SimpleDateFormat("MM.dd.yyyy").parse((String) model.getValueAt(srow, 2));
             add_date.setDate(date);
         } catch (ParseException e) {
             JOptionPane.showMessageDialog(null, e);

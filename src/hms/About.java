@@ -2,12 +2,13 @@ package hms;
 
 import com.formdev.flatlaf.FlatIntelliJLaf;
 import javax.swing.ImageIcon;
+import java.util.Objects;
 
 public final class About extends javax.swing.JFrame {
 
     public About() {
         initComponents();
-        setIconImage(new ImageIcon(getClass().getResource("/hms/img/HMS.png")).getImage());
+        setIconImage(new ImageIcon(Objects.requireNonNull(getClass().getResource("/hms/img/HMS.png"))).getImage());
         addText();
     }
     

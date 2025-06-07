@@ -1,9 +1,11 @@
 package hms.student;
 
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Objects;
 import javax.swing.Timer;
 
 public final class Contact extends javax.swing.JInternalFrame {
@@ -24,7 +26,7 @@ public final class Contact extends javax.swing.JInternalFrame {
 
     public void currentDate() {
         Date d = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy MMMM dd");
+        SimpleDateFormat sdf = new SimpleDateFormat("MMMM dd yyyy");
         // Use this string to set to a label if needed
         String dateString = sdf.format(d);
         System.out.println("Current Date: " + dateString); // For debugging
@@ -95,12 +97,12 @@ public final class Contact extends javax.swing.JInternalFrame {
 
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18));
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hms/img/telephone_icon.png")));
+        jLabel3.setFont(new java.awt.Font("Tahoma", Font.PLAIN, 18));
+        jLabel3.setIcon(new javax.swing.ImageIcon(Objects.requireNonNull(getClass().getResource("/hms/img/telephone_icon.png"))));
         jLabel3.setText(" Phone");
         jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 110, -1));
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 24));
+        jLabel6.setFont(new java.awt.Font("Tahoma", Font.PLAIN, 24));
         jLabel6.setText("+8755832353");
         jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, 190, 30));
 
@@ -109,7 +111,7 @@ public final class Contact extends javax.swing.JInternalFrame {
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18));
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hms/img/email_icon.png")));
+        jLabel4.setIcon(new javax.swing.ImageIcon(Objects.requireNonNull(getClass().getResource("/hms/img/email_icon.png"))));
         jLabel4.setText(" Email");
         jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 110, -1));
 

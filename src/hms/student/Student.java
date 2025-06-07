@@ -43,7 +43,7 @@ public final class Student extends javax.swing.JInternalFrame {
 
     public void currentDate() {
         Date d = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy MMMM dd");
+        SimpleDateFormat sdf = new SimpleDateFormat("MMMM dd yyyy");
     }
 
     public void shotime() {

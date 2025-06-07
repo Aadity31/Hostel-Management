@@ -15,6 +15,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.Objects;
 import javax.swing.JOptionPane;
 import javax.swing.Timer;
 
@@ -26,7 +27,7 @@ public final class Login extends javax.swing.JFrame {
 
     public Login() {
         initComponents();
-        setIconImage(new ImageIcon(getClass().getResource("/hms/img/HMS.png")).getImage());
+        setIconImage(new ImageIcon(Objects.requireNonNull(getClass().getResource("/hms/img/HMS.png"))).getImage());
         currentDate();
         shotime();
         conn = db.connect();
@@ -45,7 +46,7 @@ public final class Login extends javax.swing.JFrame {
 
     public void currentDate() {
         Date d = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy MMMM dd");
+        SimpleDateFormat sdf = new SimpleDateFormat("MMMM dd yyyy");
     }
 
     public void shotime() {
@@ -84,7 +85,7 @@ public final class Login extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hms/img/Login Img.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(Objects.requireNonNull(getClass().getResource("/hms/img/Login Img.png")))); // NOI18N
 
         btn_login.setBackground(new java.awt.Color(0, 166, 80));
         btn_login.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
@@ -103,7 +104,7 @@ public final class Login extends javax.swing.JFrame {
         jLabel8.setText("Password");
 
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hms/img/user_icon.png"))); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon(Objects.requireNonNull(getClass().getResource("/hms/img/user_icon.png")))); // NOI18N
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(153, 153, 153));
@@ -126,10 +127,10 @@ public final class Login extends javax.swing.JFrame {
         txtusername.setForeground(new java.awt.Color(94, 94, 94));
         txtusername.setBorder(null);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hms/img/HMS Logo.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(Objects.requireNonNull(getClass().getResource("/hms/img/HMS Logo.png")))); // NOI18N
 
         disable.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        disable.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hms/img/invisible_icon.png"))); // NOI18N
+        disable.setIcon(new javax.swing.ImageIcon(Objects.requireNonNull(getClass().getResource("/hms/img/invisible_icon.png")))); // NOI18N
         disable.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         disable.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -138,7 +139,7 @@ public final class Login extends javax.swing.JFrame {
         });
 
         show.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        show.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hms/img/eye_icon.png"))); // NOI18N
+        show.setIcon(new javax.swing.ImageIcon(Objects.requireNonNull(getClass().getResource("/hms/img/eye_icon.png")))); // NOI18N
         show.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         show.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -175,7 +176,7 @@ public final class Login extends javax.swing.JFrame {
         comb_usertype.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "Admin", "Staff", "Student" }));
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hms/img/usertype_icon.png"))); // NOI18N
+        jLabel11.setIcon(new javax.swing.ImageIcon(Objects.requireNonNull(getClass().getResource("/hms/img/usertype_icon.png")))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -313,7 +314,7 @@ public final class Login extends javax.swing.JFrame {
 
     private void btn_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_loginActionPerformed
         if (!(txtusername.getText().isEmpty() || txtpassword.getText().isEmpty() || comb_usertype.getSelectedItem().equals("Select"))) {
-            String sql = "select User_id,Username,Password,User_type from user Where (Username =? and Password =? and User_type =?)";
+            String sql = "select User_id,Username,Password,User_type from user Where (BINARY Username =? and BINARY Password =? and User_type =?)";
 
             try {
                 int count = 0;

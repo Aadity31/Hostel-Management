@@ -3,13 +3,14 @@ package hms;
 import com.formdev.flatlaf.FlatIntelliJLaf;
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.util.Objects;
 import javax.swing.ImageIcon;
 
 public class Splash extends javax.swing.JFrame {
 
     public Splash() {
         initComponents();
-        setIconImage(new ImageIcon(getClass().getResource("/hms/img/HMS.png")).getImage());
+        setIconImage(new ImageIcon(Objects.requireNonNull(getClass().getResource("/hms/img/HMS.png"))).getImage());
         Toolkit toolkit = getToolkit();
         Dimension size = toolkit.getScreenSize();
         setLocation(size.width / 2 - getWidth() / 2,
@@ -34,7 +35,7 @@ public class Splash extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(250, 250, 250));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 166, 80)));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hms/img/HMS Logo.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(Objects.requireNonNull(getClass().getResource("/hms/img/HMS Logo.png")))); // NOI18N
 
         jLabel6.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(47, 62, 80));
@@ -95,7 +96,7 @@ public class Splash extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         try {
             FlatIntelliJLaf.registerCustomDefaultsSource("hms.style");
