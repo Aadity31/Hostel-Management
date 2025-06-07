@@ -76,7 +76,7 @@ public final class Contact extends javax.swing.JInternalFrame {
         jPanel8.setBackground(new java.awt.Color(251, 251, 251));
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hms/img/NIIBS_Map.png")));
+        jLabel1.setIcon(new javax.swing.ImageIcon(Objects.requireNonNull(getClass().getResource("/hms/img/NIIBS_Map.png"))));
         jPanel8.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-50, -150, 1110, 490));
 
         txt_para.setFont(new java.awt.Font("Tahoma", 0, 15));
@@ -86,7 +86,7 @@ public final class Contact extends javax.swing.JInternalFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hms/img/map_icon.png")));
+        jLabel2.setIcon(new javax.swing.ImageIcon(Objects.requireNonNull(getClass().getResource("/hms/img/map_icon.png"))));
         jLabel2.setText(" Location");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 110, -1));
 
