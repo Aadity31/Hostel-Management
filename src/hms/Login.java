@@ -2,9 +2,14 @@ package hms;
 
 import com.formdev.flatlaf.FlatIntelliJLaf;
 import java.awt.Dimension;
+import java.awt.Frame;
 import java.awt.HeadlessException;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowStateListener;
 import javax.swing.ImageIcon;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -28,13 +33,47 @@ public final class Login extends javax.swing.JFrame {
     public Login() {
         initComponents();
         setIconImage(new ImageIcon(Objects.requireNonNull(getClass().getResource("/hms/img/HMS.png"))).getImage());
+        // Make window resizable
+        setResizable(true);
+    
+        // Add minimum size;
+        setMinimumSize(new Dimension(800, 600));
+
         currentDate();
         shotime();
         conn = db.connect();
+
+        // Center on screen
+        setLocationRelativeTo(null);
+
         Toolkit toolkit = getToolkit();
         Dimension size = toolkit.getScreenSize();
         setLocation(size.width / 2 - getWidth() / 2,
                 size.height / 2 - getHeight() / 2);
+        
+        // Add window state listener
+        addWindowStateListener(new WindowStateListener() {
+            public void windowStateChanged(WindowEvent e) {
+                if (e.getNewState() == Frame.MAXIMIZED_BOTH) {
+                    // Handle maximized state
+                    revalidate();
+                    repaint();
+                } else if (e.getNewState() == Frame.NORMAL) {
+                    // Handle restored state
+                    revalidate();
+                    repaint();
+                }
+            }
+        });
+        
+        // Add component listener for resize events
+        addComponentListener(new ComponentAdapter() {
+            public void componentResized(ComponentEvent e) {
+                // Recalculate layout when window is resized
+                revalidate();
+                repaint();
+            }
+        });
     }
 
     public static String now(String dateFormat) {
@@ -57,12 +96,13 @@ public final class Login extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold default state="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        btn_login = new javax.swing.JButton();
+        // Variables declaration - do not modify//GEN-BEGIN:variables
+        javax.swing.JButton btn_login = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
@@ -271,11 +311,17 @@ public final class Login extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, 
+                javax.swing.GroupLayout.DEFAULT_SIZE, 
+                javax.swing.GroupLayout.DEFAULT_SIZE, 
+                Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, 
+                javax.swing.GroupLayout.DEFAULT_SIZE, 
+                javax.swing.GroupLayout.DEFAULT_SIZE, 
+                Short.MAX_VALUE)
         );
 
         pack();
@@ -454,7 +500,8 @@ public final class Login extends javax.swing.JFrame {
             getToolkit().beep();
             JOptionPane.showMessageDialog(null, "One or more required fields are empty", "Error", JOptionPane.ERROR_MESSAGE);
         }
-    }//GEN-LAST:event_btn_loginActionPerformed
+    }
+    //GEN-LAST:event_btn_loginActionPerformed
 
     public static void main(String args[]) {
 
@@ -473,8 +520,6 @@ public final class Login extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_login;
     private javax.swing.JComboBox<String> comb_usertype;
     private javax.swing.JLabel disable;
     private javax.swing.JLabel jLabel1;
